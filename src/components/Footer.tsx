@@ -52,6 +52,7 @@ export default function Footer() {
               <li><a href="#programs" className="text-white/80 hover:text-white transition-colors duration-200 font-lato">Our Programs</a></li>
               <li><a href="#impact" className="text-white/80 hover:text-white transition-colors duration-200 font-lato">Our Impact</a></li>
               <li><a href="#team" className="text-white/80 hover:text-white transition-colors duration-200 font-lato">Our Team</a></li>
+              <li><a href="#merch" className="text-white/80 hover:text-white transition-colors duration-200 font-lato">Merchandise</a></li>
               <li><a href="#news" className="text-white/80 hover:text-white transition-colors duration-200 font-lato">Latest News</a></li>
               <li><a href="#contact" className="text-white/80 hover:text-white transition-colors duration-200 font-lato">Contact</a></li>
             </ul>

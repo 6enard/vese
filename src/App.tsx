@@ -5,6 +5,7 @@ import About from './components/About';
 import Programs from './components/Programs';
 import Impact from './components/Impact';
 import Team from './components/Team';
+import Merch from './components/Merch';
 import News from './components/News';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -18,6 +19,7 @@ function App() {
       <Programs />
       <Impact />
       <Team />
+      <Merch />
       <News />
       <Contact />
       <Footer />

@@ -19,6 +19,7 @@ export default function Header() {
     { name: 'Programs', href: '#programs' },
     { name: 'Impact', href: '#impact' },
     { name: 'Team', href: '#team' },
+    { name: 'Merch', href: '#merch' },
     { name: 'News', href: '#news' },
     { name: 'Contact', href: '#contact' },
   ];
