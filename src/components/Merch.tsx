@@ -1,7 +1,9 @@
-import React from 'react';
-import { ShoppingBag, MessageCircle, Phone, Palette, CreditCard } from 'lucide-react';
+import React, { useState } from 'react';
+import { ShoppingBag, MessageCircle, Phone, Palette, CreditCard, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Merch() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   const colors = [
     { name: 'Pink', color: 'bg-pink-400' },
     { name: 'Black', color: 'bg-black' },
@@ -12,6 +14,25 @@ export default function Merch() {
     { name: 'Orange', color: 'bg-orange-500' },
     { name: 'Green', color: 'bg-green-500' }
   ];
+
+  const capImages = [
+    { color: 'Pink', bgColor: 'bg-pink-400' },
+    { color: 'Black', bgColor: 'bg-black' },
+    { color: 'Grey', bgColor: 'bg-gray-400' },
+    { color: 'White', bgColor: 'bg-white border-2 border-gray-300' },
+    { color: 'Blue', bgColor: 'bg-blue-500' },
+    { color: 'Red', bgColor: 'bg-red-500' },
+    { color: 'Orange', bgColor: 'bg-orange-500' },
+    { color: 'Green', bgColor: 'bg-green-500' }
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % capImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + capImages.length) % capImages.length);
+  };
 
   const handleWhatsAppOrder = () => {
     const phoneNumber = '254794675446';
@@ -46,24 +67,70 @@ export default function Merch() {
           </div>
         </div>
 
-        {/* Featured Product */}
+        {/* Caps Carousel */}
         <div className="mb-16">
           <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
             <div className="grid lg:grid-cols-2 gap-0">
-              {/* Product Image */}
-              <div className="bg-gradient-to-br from-sage/20 to-cream/30 p-12 flex items-center justify-center">
-                <div className="relative">
-                  <div className="w-64 h-64 bg-white rounded-full shadow-2xl flex items-center justify-center">
-                    <div className="text-center">
-                      <img
-                        src="/logo2.png"
-                        alt="VESE Foundation Cap"
-                        className="h-16 w-auto object-contain mx-auto mb-4 rounded-lg shadow-md border border-gray-200/50 bg-white"
-                      />
-                      <div className="text-2xl font-bold text-charcoal font-playfair">VESE</div>
-                      <div className="text-sm text-sage font-lato">Foundation Cap</div>
+              {/* Carousel */}
+              <div className="bg-gradient-to-br from-sage/20 to-cream/30 p-8 lg:p-12 flex items-center justify-center relative">
+                <div className="relative w-full max-w-sm">
+                  {/* Carousel Container */}
+                  <div className="relative overflow-hidden rounded-2xl">
+                    <div 
+                      className="flex transition-transform duration-500 ease-in-out"
+                      style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                    >
+                      {capImages.map((cap, index) => (
+                        <div key={index} className="w-full flex-shrink-0 p-8">
+                          <div className="relative">
+                            <div className={`w-48 h-48 mx-auto rounded-full shadow-2xl flex items-center justify-center ${cap.bgColor}`}>
+                              <div className="text-center">
+                                <img
+                                  src="/logo2.png"
+                                  alt="VESE Foundation Cap"
+                                  className="h-12 w-auto object-contain mx-auto mb-3 rounded-lg shadow-md border border-gray-200/50 bg-white/95"
+                                />
+                                <div className="text-lg font-bold text-white font-playfair drop-shadow-lg">VESE</div>
+                                <div className="text-xs text-white/90 font-lato drop-shadow">Foundation</div>
+                              </div>
+                            </div>
+                            <div className="text-center mt-4">
+                              <div className="text-lg font-bold text-charcoal font-playfair">{cap.color} Cap</div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
+                  
+                  {/* Navigation Buttons */}
+                  <button
+                    onClick={prevSlide}
+                    className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white p-2 rounded-full shadow-lg transition-all duration-200 z-10"
+                  >
+                    <ChevronLeft className="h-5 w-5 text-charcoal" />
+                  </button>
+                  <button
+                    onClick={nextSlide}
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white p-2 rounded-full shadow-lg transition-all duration-200 z-10"
+                  >
+                    <ChevronRight className="h-5 w-5 text-charcoal" />
+                  </button>
+                  
+                  {/* Dots Indicator */}
+                  <div className="flex justify-center mt-6 space-x-2">
+                    {capImages.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentSlide(index)}
+                        className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                          index === currentSlide ? 'bg-sage' : 'bg-sage/30'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  
+                  {/* Price Badge */}
                   <div className="absolute -top-4 -right-4 bg-sage text-white px-4 py-2 rounded-full font-bold text-lg font-lato shadow-lg">
                     699 KSh
                   </div>
