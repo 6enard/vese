@@ -95,7 +95,14 @@ export default function Programs() {
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="bg-sage rounded-3xl p-8 lg:p-12 text-white">
-            <h3 className="text-3xl font-bold mb-4 font-playfair">Ready to Make a Difference?</h3>
+            <div className="flex items-center justify-center mb-6">
+              <img
+                src="/logo2.png"
+                alt="VESE Foundation"
+                className="h-12 w-auto object-contain mr-4 rounded-lg shadow-lg border border-white/30 bg-white/95"
+              />
+              <h3 className="text-3xl font-bold font-playfair">Ready to Make a Difference?</h3>
+            </div>
             <p className="text-xl mb-8 opacity-90 font-lato max-w-2xl mx-auto">
               Join us in our mission to transform lives and create lasting change in communities across Kenya.
             </p>

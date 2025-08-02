@@ -29,9 +29,13 @@ export default function Header() {
     }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center space-x-3">
-            <div className="bg-sage p-2 rounded-full">
-              <Heart className="h-6 w-6 text-white" />
+          <div className="flex items-center space-x-4">
+            <div className="relative">
+              <img
+                src="/logo2.png"
+                alt="VESE Foundation Logo"
+                className="h-12 w-auto object-contain rounded-lg shadow-md border border-gray-200/50 bg-white"
+              />
             </div>
             <div>
               <span className="text-2xl font-bold text-charcoal font-playfair">VESE</span>

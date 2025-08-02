@@ -123,7 +123,14 @@ export default function News() {
 
             {/* Newsletter Signup */}
             <div className="mt-8 bg-sage rounded-2xl p-6 text-white">
-              <h4 className="font-bold mb-3 font-playfair">Stay Updated</h4>
+              <div className="flex items-center mb-3">
+                <img
+                  src="/logo2.png"
+                  alt="VESE Foundation"
+                  className="h-6 w-auto object-contain mr-2 rounded shadow border border-white/30 bg-white/95"
+                />
+                <h4 className="font-bold font-playfair">Stay Updated</h4>
+              </div>
               <p className="text-sm mb-4 text-white/90 font-lato">Get the latest news and updates delivered to your inbox.</p>
               <div className="flex flex-col space-y-3">
                 <input

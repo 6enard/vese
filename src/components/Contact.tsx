@@ -139,7 +139,14 @@ export default function Contact() {
             </div>
             
             <div className="mt-12 bg-gradient-to-br from-sage to-sage/80 rounded-3xl p-8 text-white">
-              <h4 className="text-xl font-bold mb-3 font-playfair">Ready to Make an Impact?</h4>
+              <div className="flex items-center mb-4">
+                <img
+                  src="/logo2.png"
+                  alt="VESE Foundation"
+                  className="h-8 w-auto object-contain mr-3 rounded shadow-md border border-white/30 bg-white/95"
+                />
+                <h4 className="text-xl font-bold font-playfair">Ready to Make an Impact?</h4>
+              </div>
               <p className="mb-6 text-white/90 font-lato">
                 Join our community of student changemakers and help us transform lives 
                 across Kenya through education and empowerment.

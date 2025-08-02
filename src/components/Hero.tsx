@@ -11,7 +11,11 @@ export default function Hero() {
           {/* Content */}
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center bg-sage/10 px-4 py-2 rounded-full mb-6">
-              <Heart className="h-4 w-4 text-sage mr-2" />
+              <img
+                src="/logo2.png"
+                alt="VESE Foundation"
+                className="h-5 w-auto object-contain mr-2 rounded border border-sage/20"
+              />
               <span className="text-sage font-lato font-medium text-sm">Founded in 2023</span>
             </div>
             

@@ -85,7 +85,14 @@ export default function Impact() {
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-white/20">
-            <h3 className="text-3xl font-bold text-white mb-4 font-playfair">Be Part of Our Story</h3>
+            <div className="flex items-center justify-center mb-6">
+              <img
+                src="/logo2.png"
+                alt="VESE Foundation"
+                className="h-12 w-auto object-contain mr-4 rounded-lg shadow-lg border border-white/30 bg-white/95"
+              />
+              <h3 className="text-3xl font-bold text-white font-playfair">Be Part of Our Story</h3>
+            </div>
             <p className="text-xl text-white/90 mb-8 font-lato max-w-2xl mx-auto">
               Every contribution, no matter how small, creates ripples of positive change in our communities.
             </p>

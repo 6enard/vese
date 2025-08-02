@@ -42,7 +42,11 @@ export default function Team() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-flex items-center bg-sage/10 px-4 py-2 rounded-full mb-6">
-            <Users className="h-4 w-4 text-sage mr-2" />
+            <img
+              src="/logo2.png"
+              alt="VESE Foundation"
+              className="h-5 w-auto object-contain mr-2 rounded border border-sage/20"
+            />
             <span className="text-sage font-lato font-medium text-sm">Student-Led Organization</span>
           </div>
           <h2 className="text-4xl font-bold text-charcoal mb-6 font-playfair">Meet Our Team</h2>

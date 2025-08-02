@@ -8,9 +8,13 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="bg-sage p-2 rounded-full">
-                <Heart className="h-6 w-6 text-white" />
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="relative">
+                <img
+                  src="/logo2.png"
+                  alt="VESE Foundation Logo"
+                  className="h-10 w-auto object-contain rounded-lg shadow-lg border border-white/20 bg-white/95"
+                />
               </div>
               <div>
                 <span className="text-xl font-bold font-playfair">VESE</span>

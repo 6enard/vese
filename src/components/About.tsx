@@ -9,9 +9,11 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-16 mb-20">
           <div className="bg-sage/5 p-8 lg:p-12 rounded-3xl">
             <div className="flex items-center mb-6">
-              <div className="bg-sage p-3 rounded-full mr-4">
-                <Target className="h-6 w-6 text-white" />
-              </div>
+              <img
+                src="/logo2.png"
+                alt="VESE Foundation"
+                className="h-10 w-auto object-contain mr-4 rounded-lg shadow-md border border-sage/20 bg-white"
+              />
               <h2 className="text-3xl font-bold text-charcoal font-playfair">Our Mission</h2>
             </div>
             <p className="text-lg text-charcoal/80 leading-relaxed font-lato">
